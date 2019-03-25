@@ -1,0 +1,14 @@
+[package]
+name = "winoleum"
+version = "0.1.0"
+authors = ["Will Fuqua <wafuqua@gmail.com>"]
+edition = '2018'
+
+[lib]
+name = "winoleumdll"
+crate-type = ["dylib"]
+
+[dependencies]
+ole32-sys = "0.2.0"
+winapi = { version = "0.3.6", features = ["winuser", "windef", "libloaderapi", "unknwnbase", "servprov", "combaseapi", "wtypesbase", "objbase"] }
+libloading = "0.5"
